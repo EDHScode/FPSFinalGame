@@ -8,7 +8,7 @@ public class StateMachine : MonoBehaviour
 
     public void Intialise()
     {
-        
+        ChangeState(new PatrolState());
     }
 
     // Start is called before the first frame update
@@ -38,7 +38,7 @@ public class StateMachine : MonoBehaviour
         if(activeState != null)
         {
             activeState.stateMachine = this;
-
+            activeState.enemy = GetComponent<Enemy>();
             activeState.Enter();
         }
     }

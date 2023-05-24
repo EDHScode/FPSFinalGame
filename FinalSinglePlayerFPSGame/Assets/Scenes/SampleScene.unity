@@ -1728,6 +1728,8 @@ GameObject:
   - component: {fileID: 1012475049}
   - component: {fileID: 1012475048}
   - component: {fileID: 1012475052}
+  - component: {fileID: 1012475054}
+  - component: {fileID: 1012475053}
   m_Layer: 0
   m_Name: Cubert
   m_TagString: Untagged
@@ -1806,7 +1808,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012475047}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.84, y: 0, z: -19.81}
+  m_LocalPosition: {x: 4.63, y: 0, z: -19.81}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1836,6 +1838,35 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1012475053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012475047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 145c9dfe7ec3c4f74afc43fb2fbc2e70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1012475054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012475047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a820064ea688241818a9fcb162e80a74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 
+  path: {fileID: 1476485489}
+  sightDistance: 20
+  fieldOfView: 85
+  eyeHeight: 0.6
 --- !u!1 &1025856476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,7 +1877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1025856477}
   m_Layer: 0
-  m_Name: WayPoint (1)
+  m_Name: WayPoint (3)
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2514,7 +2545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1434831947}
   m_Layer: 0
-  m_Name: WayPoint (3)
+  m_Name: WayPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2564,7 +2595,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b750e9680e41e4d79a7bcf7dd32e70b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints: []
+  waypoints:
+  - {fileID: 1678374658}
+  - {fileID: 1434831947}
+  - {fileID: 950006056}
+  - {fileID: 1025856477}
+  alwaysDrawPath: 1
+  drawAsLoop: 1
+  drawNumbers: 0
+  debugColour: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1476485490
 Transform:
   m_ObjectHideFlags: 0
