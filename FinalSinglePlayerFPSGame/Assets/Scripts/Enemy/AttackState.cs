@@ -7,6 +7,9 @@ public class AttackState : BaseState
 
     private float moveTimer;
     private float losePlayerTimer;
+    private float shotTimer;
+
+    enemy.transform.LookAt(enemy.Player.transform);
 
 
     public override void Enter()
@@ -19,7 +22,14 @@ public class AttackState : BaseState
         if(enemy.CanSeePlayer())
         {
             losePlayerTimer = 0;
-            moveTimer = Time.deltaTime;
+            moveTimer += Time.deltaTime;
+            shotTimer += Time.deltaTime;
+
+            if(shotTimer > enemy.fireRate)
+            {
+                Shoot();
+            }
+
             if(moveTimer > Random.Range(3, 7))
             {
                 enemy.Agent.SetDestination(enemy.transform.position + (Random.insideUnitSphere * 5));
@@ -34,6 +44,12 @@ public class AttackState : BaseState
                 stateMachine.ChangeState(new PatrolState());
             }
         }
+    }
+
+    public void Shoot()
+    {
+        Debug.Log("Shoot");
+        shotTimer = 0;
     }
 
     public override void Exit()
