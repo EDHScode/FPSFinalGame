@@ -362,6 +362,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Editor/InteractableEditor.cs"
+"Assets/Mini Toon Office/Readme/Scripts/Editor/ReadmeEditor.cs"
 -langversion:9.0
 
 /deterministic

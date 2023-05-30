@@ -347,6 +347,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Input/PlayerInput.cs"
+"Assets/Mini Toon Office/Readme/Scripts/Readme.cs"
 "Assets/Scripts/Enemy/AttackState.cs"
 "Assets/Scripts/Enemy/Bullet.cs"
 "Assets/Scripts/Enemy/Enemy.cs"
